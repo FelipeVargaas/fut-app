@@ -1,0 +1,8 @@
+{
+  "name": "futApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "2ec2cd42"
+}

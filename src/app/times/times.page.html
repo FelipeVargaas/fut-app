@@ -1,0 +1,57 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Times</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar color="primary">
+      <ion-title size="large">Times</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-item>
+    <ion-label>Campeonato:</ion-label>
+    <ion-select [(ngModel)]="selectedCampeonato" (ionChange)="changeCampeonato()">
+      <ion-select-option value="10">CAMPEONATO BRASILEIRO</ion-select-option>
+      <ion-select-option value="2">COPA DO BRASIL</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-card *ngIf="timeSelecionado" class="time-card">
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-label class="campo-valor">
+            <div class="campo-nome">Time:</div>
+            <div class="campo-valor-inner">
+              <img [src]="timeSelecionado.escudo" alt="Escudo" class="escudo-time" />
+              {{ timeSelecionado.nome_popular }}
+            </div>
+          </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label class="campo-nome">Sigla:</ion-label>
+          <ion-label class="campo-valor">{{ timeSelecionado.sigla }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label class="campo-nome">Nome:</ion-label>
+          <ion-label class="campo-valor">{{ timeSelecionado.nome }}</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-item *ngIf="times.length > 0">
+    <ion-label>Selecione o time:</ion-label>
+    <ion-select [(ngModel)]="indiceTimeSelecionado" (ionChange)="changeTime()">
+      <ion-select-option *ngFor="let time of times; let i = index" [value]="i + 1">{{ time.nome_popular
+        }}</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+</ion-content>

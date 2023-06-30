@@ -1,0 +1,66 @@
+<ion-content class="fullscreen-swiper">
+  <div class="slide-background">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <div class="slide-content">
+            <h3>Bem Vindo ao</h3>
+            <h2>FUTAPP</h2>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <ion-row class="dev-row">
+            <h2>Programação Móvel</h2>
+            <h3>Turma: BS - INF0801N - 2023-1</h3>
+            <ion-col size="12" class="dev-column ion-text-center">
+              <img src="assets/devs/felipe.png" alt="Felipe" />
+              <h3>Aluno: Felipe Vargas</h3>
+              <p>Matrícula: 19101345</p>
+              <p>Professor: Marcelo Soares Loutfi</p>
+            </ion-col>
+          </ion-row>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <div class="slide-content">
+            <h3>Informações Técnicas</h3>
+            <p>Este aplicativo utiliza a API: api.api-futebol.com.br <br>para gerar um Feed com os principais campeonatos do pais</p>
+            <ul>
+              <li>api.api-futebol.com.br</li>
+            </ul>            
+          </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="swiper-slide swiper-slide-last">
+          <div class="slide-content">
+            <h3>Informações Sobre o APP</h3>
+            <p>Este APP, focado em futebol, mostra informações atualizadas sobre os campeonatos.</p>
+            <p>Além disso, pelos campeonatos, é possível obter as informações das tabelas de jogos daquele campeonato.
+            </p>
+            <p>Também é possível ver informações dos times buscando pelos times nos campeonatos.</p>
+          </div>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="swiper-slide swiper-slide-last">
+          <div class="slide-content">
+            <p>&copy; 2023 Felipe Vargas. Todos os direitos reservados.</p>
+            <div class="button-container">
+              <ion-button color="primary" expand="block" routerLink="/login">Sair</ion-button>
+              <ion-button color="primary" expand="block" (click)="doNotShowAgain()">Não exibir mais</ion-button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </div>
+</ion-content>

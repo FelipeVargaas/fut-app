@@ -17,13 +17,13 @@ describe('AppComponent', () => {
     }).compileComponents();
   });
 
-  it('should create the app', () => {
+  it('should create the app', async () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
   });
 
-  it('should have menu labels', () => {
+  it('should have menu labels', async () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const app = fixture.nativeElement;
@@ -33,7 +33,7 @@ describe('AppComponent', () => {
     expect(menuItems[1].textContent).toContain('Outbox');
   });
 
-  it('should have urls', () => {
+  it('should have urls', async () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const app = fixture.nativeElement;
